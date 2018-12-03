@@ -1,0 +1,8 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/dist-newstyle
+
+# misc
+.DS_Store
+.ghc.environment.x86_64-darwin-8.4.3
