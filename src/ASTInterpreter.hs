@@ -8,10 +8,9 @@ import Data.Map(Map, lookup, insert, empty, fromList)  -- for State
 
 type Program =[Stmts]
 
-data Stmts = Identifier Expr
-            |Def String [String] Stmts
+data Stmts = 
+             Def String [String] [Stmts]
             |Assign Expr Expr
-            |Block [Stmts]
             |While Expr [Stmts]
             |If Expr [Stmts]
             |IfElse Expr [Stmts] [Stmts]
@@ -26,7 +25,6 @@ data Expr = Mult Expr Expr
            |Plus Expr Expr
            |Minus Expr Expr
            |ValInt Integer
-           |ValBool Bool
            |And Expr Expr
            |Or Expr Expr
            |Not Expr
